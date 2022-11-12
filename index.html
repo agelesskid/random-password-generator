@@ -1,0 +1,32 @@
+<html>
+    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <h1>Generate a <span>random password</span></h1>
+        <h3>Never use an insecure password again.</h3>
+        <div class="settings">
+            <div class="checkboxes-wrapper">
+                <div>
+                    <input id="numbers" type="checkbox" onchange="validateArray()" checked>
+                    <label for="numbers">Numbers</label>
+                </div>
+                <div>
+                    <input id="symbols" type="checkbox" onchange="validateArray()" checked>
+                    <label for="symbols">Symbols</label>
+                </div>
+            </div>
+            <input oninput="changePswrdLength()" type="number" id="length-input">
+        </div>
+        <div class="button-wrapper"> 
+            <button id="generate-button" onclick="insertPswrds()">Generate passwords</button>  
+        </div>
+        <div class="input-wrapper">
+            <input id="pswrd1" onclick="copy('pswrd1')" readonly>
+            <input id="pswrd2" onclick="copy('pswrd2')" readonly>
+        </div>
+        
+        
+        <script src="index.js"></script>   
+    </body>
+</html>
