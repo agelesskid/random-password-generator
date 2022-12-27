@@ -41,14 +41,12 @@ function generatePswrd() {
 }
 
 function insertPswrds(){ 
-    let firstPswrd = generatePswrd()
-    let secondPswrd = generatePswrd()
-    firstPswrdEl.value = firstPswrd
-    secondPswrdEl.value = secondPswrd
+    firstPswrdEl.value = generatePswrd()
+    secondPswrdEl.value = generatePswrd()
 }
 
 function copy(id) {
-    let el = document.querySelector("#" + id)
+    let el = document.querySelector(`#${id}`)
     el.select();
     document.execCommand("copy")
     console.log("Copied to Clipboard")
